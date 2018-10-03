@@ -32,7 +32,8 @@ view: users {
       week,
       month,
       quarter,
-      year
+      year,
+      day_of_week
     ]
     sql: ${TABLE}.created_at ;;
   }
