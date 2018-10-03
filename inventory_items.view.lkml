@@ -19,6 +19,7 @@ view: inventory_items {
       time,
       date,
       week,
+      day_of_week,
       month,
       quarter,
       year
