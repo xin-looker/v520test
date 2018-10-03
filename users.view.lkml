@@ -68,6 +68,11 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
+  measure: count_very_very_very_very_very_very_long_name {
+    type: count
+    drill_fields: [detail*]
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]
