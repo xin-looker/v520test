@@ -37,4 +37,21 @@ view: orders {
     type: count
     drill_fields: [created_month, count]
   }
+
+  measure: count_user {
+    type: number
+    drill_fields: [created_month, count]
+    sql: count(${user_id}) ;;
+  }
+
+  measure: count_distinct_users {
+    type: number
+    sql: count(distinct ${user_id});;
+  }
+
+  measure: average_times {
+    type: number
+    sql: ${count_user}/${count_distinct_users}*1.0 ;;
+  }
+
 }
